@@ -1,5 +1,4 @@
 ﻿namespace POOInheritance;
-
 public class Parallelogram : GeometricFigure
 {
     private double _b;

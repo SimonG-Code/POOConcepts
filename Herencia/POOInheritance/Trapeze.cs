@@ -4,16 +4,16 @@ public class Trapeze : GeometricFigure
 {
     private double _base1;
     private double _base2;
-    private double _h;
+    private double _height;
     private double _side1;
     private double _side2;
 
-    public Trapeze(string name, double base1, double base2, double h, double side1, double side2)
+    public Trapeze(string name, double base1, double base2, double height, double side1, double side2)
     {
         Name = name;
         Base1 = base1;
         Base2 = base2;
-        H = h;
+        Height = height;
         Side1 = side1;
         Side2 = side2;
     }
@@ -30,10 +30,10 @@ public class Trapeze : GeometricFigure
         set { _base2 = ValidateBase2(value); }
     }
 
-    public double H
+    public double Height
     {
-        get { return _h; }
-        set { _h = ValidateH(value); }
+        get { return _height; }
+        set { _height = ValidateHeight(value); }
     }
 
     public double Side1
@@ -50,7 +50,7 @@ public class Trapeze : GeometricFigure
 
     public double GetArea()
     {
-        return (_base1 + _base2) * _h / 2;
+        return (_base1 + _base2) * _height / 2;
     }
 
     public double GetPerimeter()
@@ -76,13 +76,13 @@ public class Trapeze : GeometricFigure
         return base2;
     }
 
-    private double ValidateH(double h)
+    private double ValidateHeight(double height)
     {
-        if (h <= 0)
+        if (height <= 0)
         {
             throw new ArgumentException("La altura debe ser positiva.");
         }
-        return h;
+        return height;
     }
 
     private double ValidateSide1(double side1)
@@ -105,7 +105,6 @@ public class Trapeze : GeometricFigure
 
     public override string ToString()
     {
-        return $"{Name}\n=> Área: {GetArea():F5} Perímetro: {GetPerimeter():F5}";
+        return $"{Name}\n=> Area.....: {GetArea():F5} Perimeter: {GetPerimeter():F5}";
     }
 }
-    

@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace POOInheritance;
+﻿namespace POOInheritance;
 
 public class Square : GeometricFigure
 {
@@ -18,7 +16,7 @@ public class Square : GeometricFigure
         set { _side = ValidateSide(value); }
     }
 
-    public double GetArena()
+    public double GetArea()
     {
         return _side * _side;
     }
@@ -39,6 +37,6 @@ public class Square : GeometricFigure
 
     public override string ToString()
     {
-        return $"{Name}\n=> Area.....: {GetArea():F5} Perimeter: {GetPerimeter():F5}";
+        return $"{Name}\n=> Área: {GetArea():F5} Perímetro: {GetPerimeter():F5}";
     }
 }

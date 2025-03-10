@@ -1,5 +1,4 @@
 ﻿namespace POOInheritance;
-
 public class Triangle : GeometricFigure
 {
     private double _sideA;

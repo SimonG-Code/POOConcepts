@@ -91,4 +91,3 @@ public class Kite : GeometricFigure
         return $"{Name}\n=> Área: {GetArea():F5} Perímetro: {GetPerimeter():F5}";
     }
 }
-

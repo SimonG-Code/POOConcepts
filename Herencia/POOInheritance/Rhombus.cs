@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace POOInheritance;
+﻿namespace POOInheritance;
 
 public class Rhombus : GeometricFigure
 {
@@ -20,8 +18,8 @@ public class Rhombus : GeometricFigure
         get { return _side; }
         set { _side = ValidateSide(value); }
     }
-            
-   
+        
+
     public double D1 
     {
         get { return _d1; } 
